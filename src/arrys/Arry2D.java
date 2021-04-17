@@ -17,6 +17,10 @@ public class Arry2D {
             }
             System.out.println();
         }
+        System.out.println("Diagonal position of 2D Array");
 
+        for(int i=0,j=2;i<3;i++,j--){
+            System.out.printf("%10s \n",arr2d[i][j]);
+        }
     }
 }

@@ -13,6 +13,7 @@ public class HelloWorld {
         int a1 = a2-1;
         System.out.println((int)'A');
         System.out.println((char)a1);
+        System.out.println('\u0085');
     }
 
 }

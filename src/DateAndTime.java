@@ -1,5 +1,6 @@
 import java.time.*;
 import java.time.format.DateTimeFormatter;
+import java.util.Locale;
 
 public class DateAndTime {
     public static void main(String[] args) {
@@ -25,7 +26,7 @@ public class DateAndTime {
         System.out.println(lDateTime);
 
         LocalDate birthDate = LocalDate.of(1990, Month.SEPTEMBER,24);
-        Period age = Period.between(birthDate,lDate);
+        Period age = Period.between(birthDate,lDate); //we can also use Duration
 
         System.out.println("My age is : "+age);
 
@@ -39,6 +40,12 @@ public class DateAndTime {
         System.out.println("BE Time : "+inTime);
         System.out.println("IN Time : "+inTime.withZoneSameInstant(in));
         System.out.println("IN Time : "+inTime.withZoneSameInstant(in).getHour());
+
+        String pattern = "EE', 'd' of 'MMMM YYYY' at 'HH:mm z";
+        DateTimeFormatter dtfrmt = DateTimeFormatter.ofPattern(pattern, Locale.US);
+
+        System.out.println("IN Time : "+dtfrmt.format(inTime.withZoneSameInstant(in)));
+        System.out.println(Instant.now().atZone(in));
 
     }
 }
