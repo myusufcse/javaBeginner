@@ -48,6 +48,7 @@ public class DateAndTime {
 
         System.out.println("IN Time : "+dtfrmt.format(inTime.withZoneSameInstant(in)));
         System.out.println(Instant.now().atZone(in));
+        System.out.println(Period.ofDays(3).getDays());
 
     }
 }

@@ -5,6 +5,8 @@ public class StaticMemberDemo {
     static int a;
     static int data = 25;
 
+    int age = 10;
+
     public static void main(String[] args) {
         // called the static variable
         a = 67;
@@ -22,7 +24,7 @@ public class StaticMemberDemo {
     }
 
     public int plusData(){
-        System.out.println(StaticMemberDemo.getNames());
+        System.out.println("Hi I am non static method" + age);
         return ++StaticMemberDemo.data;
     }
 
