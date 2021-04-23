@@ -1,0 +1,5 @@
+The example is slightly artificial, because I'm not actually doing anything with the data. I'm reading data from one file and just directly writing into the other, which is frankly pointless, because we'll see later there's just a method to copy the file. You could have used that. You didn't really need to do all of that stream reading and writing just to copy a file.
+
+But presumably, in between reading and writing, there will be extra actions that you would like to perform with that data. These actions are not present in this example, but we assume you could have written them.
+
+So anyway, let's imagine there is some kind of binary file, and I want to read the contents from it. And I organized the buffer. So set up the binary array, and that's what I will be populating with the data from the file.
