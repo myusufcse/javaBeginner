@@ -19,17 +19,22 @@ public class JavaThreadSync {
         JavaThreadSync jts = new JavaThreadSync();
         Runnable r = () -> {
             jts.a();
-            JavaThreadSync.b();
+            // JavaThreadSync.b();
             synchronized (jts) {
                 jts.c();
+                try {
+                    jts.wait(100);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
         };
 
-        Thread t1 = new Thread(r);
-        Thread t2 = new Thread(r);
+        Thread t1 = new Thread(r, "myThread1");
+        Thread t2 = new Thread(r,"myThread2");
+        t1.setDaemon(true);
         t1.start();
         t2.start();
-
 
     }
 }

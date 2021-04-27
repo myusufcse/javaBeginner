@@ -7,6 +7,16 @@ public class ListExample {
         // To Create a list
         ArrayList<String> list = new ArrayList<>(); // 16
         ArrayList<Integer> list1 = new ArrayList<>(4);
+        Integer a = 1;
+        List<String> testList = new ArrayList<>();
+        testList.add(0, "certification");
+        testList.set(0, "guide");
+        System.out.println(testList);
+
+        list1.add(a);
+        list1.add(a *= 5);
+        list1.removeIf(a1 ->a1==1); // Lambda expression's parameter a cannot redeclare another local variable defined in an enclosing scope.
+        System.out.println(list1);
 
         //To Add Value use .add
         list.add("hello");
